@@ -1,8 +1,8 @@
 //import { useEffect, useState } from "react"
 
-import TopBanner from "./TopBanner"
 
-const Banners =()=>{
+
+const TopBanners =()=>{
    //  const [ posts , setPosts] = useState([])
 
    //  useEffect(() => {
@@ -20,9 +20,12 @@ const Banners =()=>{
 
     return(
         <>
-        <TopBanner/>
+        <div className=" max-w-[1400px] mx-auto md:my-6 mb-2">
+            <a href=""><img src="../img/banner/carnival.png" alt="" /></a>
+        </div>
+        <img src="../img/banner/coupn.png" alt="" />
         </>
     )
 }
 
-export default Banners
+export default TopBanners
