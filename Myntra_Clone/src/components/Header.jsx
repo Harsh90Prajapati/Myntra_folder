@@ -6,50 +6,52 @@ const Header = () => {
 
     const[ open , setOpen] = useState(false) 
   return (
-    <nav className="w-full sm:p-6 p-4 shadow">
-      <div className="flex justify-between items-center">
+    <nav className="sm:p-4 p-4 shadow">
+      <div className="flex justify-evenly items-center">
         <div className="lg:hidden" onClick={()=>{setOpen(!open)}}>
           {!open?<AiOutlineMenu className="text-2xl" />:<AiOutlineClose className="text-2xl" />}
         </div>
-        <img src="Myntra-icon-logo.svg" alt="" className="w-10 sm:w-14 mx-3" />
-        <div className="hidden  w-full lg:flex items-center justify-center gap-10 mx-3 text-xs uppercase text-slate-600 font-bold">
+        <img src="Myntra-icon-logo.svg" alt="" className="w-10 mx-4 sm:w-12" />
+        <div className="hidden gap-10 lg:flex items-center justify-evenly text-xs uppercase text-slate-600 font-bold">
           <a href="">Men</a>
           <a href="">Women</a>
           <a href="">Kids</a>
-          <a href="">Home & Living</a>
+          <a href="">Brand</a>
           <a href="">Beauty</a>
-          <a href="">Studio</a>
-        </div>
+          <a href="">Studio
+          <span className=" absolute top-5 text-[9px] text-end font-extrabold text-red-600">new</span></a>       
+       </div>
         <input
           type="search"
           placeholder="Search"
-          className="w-full px-4 sm:mx-4 py-2 outline-none bg-gray-100 rounded-md"
+          className=" sm:w-[550px] w-full mx-3 px-4 py-2 outline-none bg-gray-100 rounded-md"
         />
-        <div className="flex justify-between items-center mx-4 sm:gap-7 gap-1">
+        <div className="flex justify-between items-center sm:gap-7 gap-1">
           <div className="flex flex-col justify-center items-center">
-            <CiUser size={23} />
-            <span className="hidden sm:block text-xs font-semibold uppercase">
+            <CiUser size={20} />
+            <span className="hidden sm:block text-[12px] font-semibold uppercase">
               profile
             </span>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <CiHeart size={23} />
-            <span className="hidden sm:block text-xs font-semibold uppercase">
+            <CiHeart size={20} />
+            <span className="hidden sm:block text-[12px] font-semibold uppercase">
               wishlist
             </span>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <CiBag1 size={23} />
-            <span className="hidden sm:block text-xs font-semibold uppercase">
+            <CiBag1 size={20} />
+            <span className="absolute sm:top-1 top-3 sm:right-14 right-3 text-sm font-bold text-red-500 ">0</span>
+            <span className="hidden sm:block text-[12px] font-semibold uppercase">
               bag
             </span>
           </div>
         </div>
       </div>
-      
+
       {/* Mobile View Navbar */}
 
-      {open &&<div className="flex flex-wrap justify-between px-2">
+      {open &&<div className="absolute top-[70px] w-full left-0 z-10 lg:hidden flex flex-wrap justify-between  border px-6 pb-4 shadow-md  bg-white">
         <div className="flex flex-col mt-5 mx-2">
           <h3 className="text-xs mb-2 font-semibold">MEN</h3>
           <a href="#" className="sm:text-sm text-xs pb-1 text-slate-500">
@@ -123,7 +125,7 @@ const Header = () => {
           </a>
         </div>
         <div className="flex flex-col mt-5 mx-2">
-          <h3 className="text-xs mb-2 font-semibold">Help Centre</h3>
+          <h3 className="text-xs mb-2 font-semibold">HELP CENTER</h3>
           <a href="#" className="sm:text-sm text-xs pb-1 text-slate-500">
             Myntra Studio
           </a>

@@ -41,10 +41,13 @@ const Footer =()=>{
                 <div className="flex flex-col">
                     <h3 className="sm:pt-0 py-4 text-xs  font-semibold">EXPERIENCE MYNTRA APP ON MOBILE</h3>
                      <div className="flex gap-2">
-                        <img src="apple.png" alt="" className="w-20"/>
-                        <img src="play.png" alt="" className="w-20"/>
+                        <img src="./img/pay/app.jpg" alt="app store" className="w-32"/>
+                        <img src="./img/pay/play.jpg" alt="play store" className="w-32"/>
                      </div>
-                     <h3 className="py-4 text-xs  font-semibold">KEEP IN TOUCH</h3>
+                     <div>
+                        <img src="./img/pay/pay.png" alt="payment mode" className="my-4 w-full" />
+                     </div>
+                     <h3 className="py-2 text-xs  font-semibold">KEEP IN TOUCH</h3>
                      <div className="flex gap-1">
                         <FaFacebookSquare className="text-2xl text-slate-500 hover:text-black hover:duration-500"/>
                         <FaSquareXTwitter className="text-2xl text-slate-500 hover:text-black hover:duration-500"/>
