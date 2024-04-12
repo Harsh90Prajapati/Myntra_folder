@@ -1,4 +1,4 @@
-const Women =() => {
+const WomenTop =() => {
    return(
     <div className="max-w-5xl mx-auto ">
     <center className="mt-8 text-xl md:text-2xl font-semibold font-serif text-pink-500">Women</center>
@@ -74,4 +74,4 @@ const Women =() => {
    )
 }
 
-export default Women;
+export default WomenTop;

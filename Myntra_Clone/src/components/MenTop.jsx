@@ -1,4 +1,4 @@
-const Men =()=>{
+const MenTop =()=>{
     return(
         <div className="max-w-5xl mx-auto ">
         <center className="mt-8 text-xl md:text-2xl font-semibold font-serif text-blue-500">Men</center>
@@ -75,4 +75,4 @@ const Men =()=>{
     )
 }
 
-export default Men;
+export default MenTop;

@@ -1,12 +1,12 @@
 import TopBanners from "../components/TopBanners";
-import Category from "../components/Category"
+import  CategoryProducts from "../components/CategoryProducts"
 import BottomBanner from "../components/BottomBanner";
 
 const Home =()=>{
   return(
     <div className="">
       <TopBanners/>
-      <Category/>
+      < CategoryProducts/>
       <BottomBanner/>
     </div>
   )
