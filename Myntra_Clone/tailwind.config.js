@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation:{
+        move:'move 3s ease-in-out infinite'
+      },
+      keyframes:{
+        move:{
+          '0%':{ "margin-left" :'-100px'},
+        }
+      }
+    },
   },
   plugins: [],
 }
