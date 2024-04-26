@@ -1,7 +1,6 @@
 const WomenTop =() => {
    return(
     <div className="max-w-5xl mx-auto ">
-    <center className="mt-8 text-xl md:text-2xl font-semibold font-serif text-pink-500">Women</center>
     <div className="flex justify-start items-center gap-4 m-4 overflow-scroll duration-200 no-scrollbar">
       <div className="flex flex-col justify-center items-center">
         <div className="bg-blue-300 md:w-32 w-24">

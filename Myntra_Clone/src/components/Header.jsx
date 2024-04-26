@@ -1,31 +1,31 @@
 import { useState } from "react";
 import { CiHeart, CiUser, CiBag1, CiMenuBurger } from "react-icons/ci";
 import { AiOutlineClose  , AiOutlineMenu} from "react-icons/ai";
+import { Outlet, Link } from "react-router-dom";
 
 const Header = () => {
 
     const[ open , setOpen] = useState(false) 
   return (
-    <nav className="sm:p-4 p-4 shadow">
+    <><nav className="sm:p-4 p-4 shadow">
       <div className="flex justify-evenly items-center">
-        <div className="lg:hidden" onClick={()=>{setOpen(!open)}}>
-          {!open?<AiOutlineMenu className="text-2xl" />:<AiOutlineClose className="text-2xl" />}
+        <div className="lg:hidden" onClick={() => { setOpen(!open); } }>
+          {!open ? <AiOutlineMenu className="text-2xl" /> : <AiOutlineClose className="text-2xl" />}
         </div>
-        <img src="Myntra-icon-logo.svg" alt="" className="w-10 mx-4 sm:w-12" />
+        <Link to="/"><img src="Myntra-icon-logo.svg" alt="" className="w-10 mx-4 sm:w-12" /></Link>
         <div className="hidden gap-10 lg:flex items-center justify-evenly text-xs uppercase text-slate-600 font-bold">
-          <a href="">Men</a>
-          <a href="">Women</a>
-          <a href="">Kids</a>
-          <a href="">Brand</a>
-          <a href="">Beauty</a>
-          <a href="">Studio
-          <span className=" absolute top-5 text-[9px] text-end font-extrabold text-red-600">new</span></a>       
-       </div>
+          <Link to="/men">Men</Link>
+          <Link to="/women">Women</Link>
+          <Link to="">Kids</Link>
+          <Link to="">Brand</Link>
+          <Link to="">Beauty</Link>
+          <Link to="">Studio
+            <span className=" absolute top-5 text-[9px] text-end font-extrabold text-red-600">new</span></Link>
+        </div>
         <input
           type="search"
           placeholder="Search"
-          className=" sm:w-[550px] w-full mx-3 px-4 py-2 outline-none bg-gray-100 rounded-md"
-        />
+          className=" sm:w-[550px] w-full mx-3 px-4 py-2 outline-none bg-gray-100 rounded-md" />
         <div className="flex justify-between items-center sm:gap-7 gap-1">
           <div className="flex flex-col justify-center items-center">
             <CiUser size={20} />
@@ -41,7 +41,7 @@ const Header = () => {
           </div>
           <div className="flex flex-col justify-center items-center">
             <CiBag1 size={20} />
-            <span className="absolute sm:top-1 top-3 sm:right-14 right-3 text-sm font-bold text-red-500 ">0</span>
+            <span className="absolute sm:top-1 top-3 lg:right-14 right-3 text-sm font-bold text-red-500 ">0</span>
             <span className="hidden sm:block text-[12px] font-semibold uppercase">
               bag
             </span>
@@ -51,7 +51,7 @@ const Header = () => {
 
       {/* Mobile View Navbar */}
 
-      {open &&<div className="absolute top-[70px] w-full left-0 z-10 lg:hidden flex flex-wrap justify-between  border px-6 pb-4 shadow-md  bg-white">
+      {open && <div className="absolute top-[70px] w-full left-0 z-10 lg:hidden flex flex-wrap justify-between  border px-6 pb-4 shadow-md  bg-white">
         <div className="flex flex-col mt-5 mx-2">
           <h3 className="text-xs mb-2 font-semibold">MEN</h3>
           <a href="#" className="sm:text-sm text-xs pb-1 text-slate-500">
@@ -149,7 +149,7 @@ const Header = () => {
           </a>
         </div>
       </div>}
-    </nav>
+    </nav><Outlet /></>
   );
 };
 

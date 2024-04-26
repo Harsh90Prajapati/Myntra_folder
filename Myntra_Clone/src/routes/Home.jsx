@@ -4,11 +4,11 @@ import BottomBanner from "../components/BottomBanner";
 
 const Home =()=>{
   return(
-    <div className="">
+    <>
       <TopBanners/>
-      < CategoryProducts/>
+      <CategoryProducts/>
       <BottomBanner/>
-    </div>
+    </>
   )
 }
 

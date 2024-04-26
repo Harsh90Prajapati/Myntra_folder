@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       animation:{
-        move:'move 3s ease-in-out infinite'
+        move:'move 1s ease-in-out infinite alternate'
       },
       keyframes:{
         move:{

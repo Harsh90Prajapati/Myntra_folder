@@ -1,7 +1,7 @@
 const MenTop =()=>{
     return(
-        <div className="max-w-5xl mx-auto ">
-        <center className="mt-8 text-xl md:text-2xl font-semibold font-serif text-blue-500">Men</center>
+        <div className="max-w-6xl mx-auto ">
+        
           <div className="flex justify-start items-center gap-4 m-4 overflow-scroll duration-200 no-scrollbar">
             <div className="flex flex-col justify-center items-center">
               <div className="bg-blue-300 md:w-32 w-24">
