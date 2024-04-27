@@ -13,7 +13,7 @@ const Header = () => {
           {!open ? <AiOutlineMenu className="text-2xl" /> : <AiOutlineClose className="text-2xl" />}
         </div>
         <Link to="/"><img src="Myntra-icon-logo.svg" alt="" className="w-10 mx-4 sm:w-12" /></Link>
-        <div className="hidden gap-10 lg:flex items-center justify-evenly text-xs uppercase text-slate-600 font-bold">
+        <div className="hidden gap-6 mx-5 2xl:mx-0 xl:gap-10 lg:flex items-center text-xs uppercase text-slate-600 font-bold">
           <Link to="/men">Men</Link>
           <Link to="/women">Women</Link>
           <Link to="">Kids</Link>
@@ -25,7 +25,7 @@ const Header = () => {
         <input
           type="search"
           placeholder="Search"
-          className=" sm:w-[550px] w-full mx-3 px-4 py-2 outline-none bg-gray-100 rounded-md" />
+          className=" sm:w-[550px] w-full mx-6 px-4 py-2 outline-none bg-gray-100 rounded-md" />
         <div className="flex justify-between items-center sm:gap-7 gap-1">
           <div className="flex flex-col justify-center items-center">
             <CiUser size={20} />
@@ -39,9 +39,9 @@ const Header = () => {
               wishlist
             </span>
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center"> 
+            <span className="absolute right-4 xl:right-14 top-3 sm:top-1 text-sm font-bold text-red-500 ">0</span>
             <CiBag1 size={20} />
-            <span className="absolute sm:top-1 top-3 lg:right-14 right-3 text-sm font-bold text-red-500 ">0</span>
             <span className="hidden sm:block text-[12px] font-semibold uppercase">
               bag
             </span>

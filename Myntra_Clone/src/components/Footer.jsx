@@ -40,7 +40,7 @@ const Footer =()=>{
                 </div>
                 <div className="flex flex-col">
                     <h3 className="sm:pt-0 py-4 text-xs  font-semibold">EXPERIENCE MYNTRA APP ON MOBILE</h3>
-                     <div className="flex gap-2">
+                     <div className="flex gap-2 flex-wrap">
                         <img src="./img/pay/app.jpg" alt="app store" className="w-32"/>
                         <img src="./img/pay/play.jpg" alt="play store" className="w-32"/>
                      </div>
