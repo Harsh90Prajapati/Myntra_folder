@@ -5,6 +5,9 @@ import MenProducts from "./MenProducts";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WomenProducts from "./WomenProducts";
 import Home from "./Home"
+import Bag from "./Bag"
+import Wishlist from "./Wishlist";
+import Profile from "./Profile";
 
 function App() {
 
@@ -16,6 +19,9 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/men" element={<MenProducts/>} />
         <Route path="/women" element={<WomenProducts/>} />
+        <Route path="/bag" element={<Bag/>}/>
+        <Route path="/wishlist" element={<Wishlist/>}/>
+        <Route path="/profile" element={<Profile/>}/>
       </Routes>
       <Footer/>
     </Router>

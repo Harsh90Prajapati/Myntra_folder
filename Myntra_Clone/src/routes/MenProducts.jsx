@@ -35,7 +35,7 @@ const MenProducts=()=>{
                   href=""
                   className="flex justify-center items-center w-10 h-10 rounded-full bg-emerald-200"
                 >
-                  <CiShoppingCart size={20} className="font-semibold" />
+                  <CiShoppingCart size={20} className="font-extrabold text-white" />
                 </a>
               </div>
             </div>

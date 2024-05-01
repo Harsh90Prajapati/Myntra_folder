@@ -27,25 +27,25 @@ const Header = () => {
           placeholder="Search"
           className=" sm:w-[550px] w-full mx-6 px-4 py-2 outline-none bg-gray-100 rounded-md" />
         <div className="flex justify-between items-center sm:gap-7 gap-1">
-          <div className="flex flex-col justify-center items-center">
+          <Link to="/profile" className="flex flex-col justify-center items-center">
             <CiUser size={20} />
             <span className="hidden sm:block text-[12px] font-semibold uppercase">
               profile
             </span>
-          </div>
-          <div className="flex flex-col justify-center items-center">
+          </Link>
+          <Link to="/wishlist" className="flex flex-col justify-center items-center">
             <CiHeart size={20} />
             <span className="hidden sm:block text-[12px] font-semibold uppercase">
               wishlist
             </span>
-          </div>
-          <div className="flex flex-col justify-center items-center"> 
+          </Link>
+          <Link to="/bag" className="flex flex-col justify-center items-center"> 
             <span className="absolute right-4 xl:right-14 top-3 sm:top-1 text-sm font-bold text-red-500 ">0</span>
             <CiBag1 size={20} />
             <span className="hidden sm:block text-[12px] font-semibold uppercase">
               bag
             </span>
-          </div>
+          </Link>
         </div>
       </div>
 
@@ -53,7 +53,7 @@ const Header = () => {
 
       {open && <div className="absolute top-[70px] w-full left-0 z-10 lg:hidden flex flex-wrap justify-between  border px-6 pb-4 shadow-md  bg-white">
         <div className="flex flex-col mt-5 mx-2">
-          <h3 className="text-xs mb-2 font-semibold">MEN</h3>
+          <Link to="/men" className="text-xs mb-2 font-semibold">MEN</Link>
           <a href="#" className="sm:text-sm text-xs pb-1 text-slate-500">
             Topwear
           </a>
@@ -77,7 +77,7 @@ const Header = () => {
           </a>
         </div>
         <div className="flex flex-col mt-5 mx-2">
-          <h3 className="text-xs mb-2 font-semibold">WOMEN</h3>
+          <Link to="/women" className="text-xs mb-2 font-semibold">WOMEN</Link>
           <a href="#" className="sm:text-sm text-xs pb-1 text-slate-500">
             Indina & Fusion Wear
           </a>
