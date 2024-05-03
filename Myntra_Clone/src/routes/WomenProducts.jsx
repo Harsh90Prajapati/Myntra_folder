@@ -1,8 +1,12 @@
-import React , {useState , useEffect} from 'react'
+import React , {useState , useEffect} from 'react';
+import { useSelector } from "react-redux";
 import WomenTop from '../components/WomenTop';
-import MenTop from '../components/MenTop';
+import SideFilter from "../components/SideFilter";
+import Items from "../components/Items";
 
 const WomenProducts = () => {
+
+  const items = useSelector(store=> store.items)
 
     // const [ posts , setPosts] = useState([])
 
@@ -16,7 +20,7 @@ const WomenProducts = () => {
     //    fetchApp()
     // },[]);
   return (
-    <div>
+    <>
       <WomenTop />
       {/* {posts.map((items) => {
         return (
@@ -37,7 +41,13 @@ const WomenProducts = () => {
           </div>
         );
       })} */}
-    </div>
+      <div className=" md:my-20 m-10 lg:w-full flex flex-col md:flex-row justify-start items-start md:border max-w-7xl lg:mx-auto">
+        <SideFilter />
+        <div className=" lg:w-4/5 md:max-h-[932px] no-scrollbar flex md:flex-wrap md:items-start items-center justify-center md:justify-start flex-wrap md:gap-0 gap-2 overflow-scroll"> 
+        {items.map(item => <Items key={item.id} items = {item}/>)}
+        </div>
+      </div>
+    </>
   );
 }
 

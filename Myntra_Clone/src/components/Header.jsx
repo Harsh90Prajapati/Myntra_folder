@@ -2,10 +2,13 @@ import { useState } from "react";
 import { CiHeart, CiUser, CiBag1, CiMenuBurger } from "react-icons/ci";
 import { AiOutlineClose  , AiOutlineMenu} from "react-icons/ai";
 import { Outlet, Link } from "react-router-dom";
+import { useSelector } from "react-redux"
 
 const Header = () => {
 
     const[ open , setOpen] = useState(false) 
+    const bag = useSelector( store =>store.bag)
+
   return (
     <><nav className="sm:p-4 p-4 shadow">
       <div className="flex justify-evenly items-center">
@@ -40,7 +43,7 @@ const Header = () => {
             </span>
           </Link>
           <Link to="/bag" className="flex flex-col justify-center items-center"> 
-            <span className="absolute right-4 xl:right-14 top-3 sm:top-1 text-sm font-bold text-red-500 ">0</span>
+            <span className="absolute right-4 xl:right-14 top-3 sm:top-1 text-sm font-bold text-red-500 ">{bag.length}</span>
             <CiBag1 size={20} />
             <span className="hidden sm:block text-[12px] font-semibold uppercase">
               bag
