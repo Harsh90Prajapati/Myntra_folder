@@ -15,7 +15,7 @@ const Fetchitems = ()=>{
         const signal = controller.signal;
         
         //dispatch(fetchStatusActions.markFetchingStart())
-        fetch("http://localhost:8080/items", { signal })
+        fetch(`https://myntra-folder.vercel.app/items`, { signal })
         .then((res) => res.json())
         .then(({ items }) =>{
             // dispatch(fetchStatusActions.markFetchDone());
