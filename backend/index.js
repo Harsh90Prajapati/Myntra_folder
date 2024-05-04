@@ -117,13 +117,13 @@ const data={
 app.get('/',(req,res)=>{
   res.send("running")
 })
-app.get('/items', async (req, res) => {
+app.get('/items', (req, res) => {
   // const storedItems = await getStoredItems();
   // await new Promise((resolve, reject) => setTimeout(() => resolve(), 2000));
   res.json({ items: date });
 });
 
-app.get('/items/:id', async (req, res) => {
+app.get('/items/:id', (req, res) => {
   // const storedItems = await getStoredItems();
   const id=req.params.id
   const item = data.find((item) => item.id === req.params.id);
