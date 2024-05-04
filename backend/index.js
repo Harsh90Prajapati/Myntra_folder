@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+require('dotenv').config()
 
 const { getStoredItems, storeItems } = require('./data/items.js');
 
@@ -145,4 +146,4 @@ app.post('/items', async (req, res) => {
   res.status(201).json({ message: 'Stored new item.', item: newItem });
 });
 
-app.listen(8080,()=>console.log('server is running 8080'));
+app.listen(process.env.PORT,()=>console.log(`server is running ${process.env.PORT}`));
