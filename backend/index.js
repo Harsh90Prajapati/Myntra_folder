@@ -114,6 +114,9 @@ const data={
     ]
   ]
 }
+app.get('/',(req,res)=>{
+  res.send("running")
+})
 app.get('/items', async (req, res) => {
   // const storedItems = await getStoredItems();
   // await new Promise((resolve, reject) => setTimeout(() => resolve(), 2000));
